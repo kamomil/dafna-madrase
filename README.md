@@ -1,13 +1,13 @@
 # installing madrase LMS locally on ubuntu 24.04.02 (Python 3.12.2)
 
 I have docker already installed.
-To make sure docker is correctly install you should be able to run
+To make sure docker is correctly installed you should be able to run
 (WITHOUT SUDO)
 
 ```
 docker run hello-world
 ```
-I you are able to run it only with `sudo` this is not enough,
+If you are able to run it only with `sudo` this is not enough.
 you should follow the instructions here to be able to run withtout sudo:
 
 https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
@@ -27,9 +27,10 @@ tutor, version 18.2.2
 ```
 
 
-now we run 'tutor local launch'
+now we run `tutor local launch`
 
-I got some things starting to run but at the end I got: en error:
+I got some things starting to run but at the end I en error:
+
 ```
 (env) 6.8dafna@guri:~$ tutor local launch
 ==================================================
@@ -89,7 +90,8 @@ docker compose -f /home/dafna/.local/share/tutor/env/local/docker-compose.yml -f
 Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint tutor_local-caddy-1 (026907d7e5a86d974483137e5bf84aab966c5d36e2ea16d0f0a3ed2cb1679ee5): failed to bind host port for 0.0.0.0:80:172.18.0.3:80/tcp: address already in use
 Error: Command failed with status 1: docker compose -f /home/dafna/.local/share/tutor/env/local/docker-compose.yml -f /home/dafna/.local/share/tutor/env/local/docker-compose.prod.yml --project-name tutor_local up --remove-orphans -d
 ```
-It says my localhost address on port 80 is already in use. Apprently for some reason I have 
+
+It says my localhost address on port 80 is already in use. Apparently for some reason I have 
 lighthttpd service running on my laptop. So I had to stop it:
 ```
 sudo systemctl stop lighttpd.service
@@ -99,7 +101,8 @@ then running again:
 tutor local launch
 ```
 
-it does lot's of think, taking few minutes, and it ends with typing to the screen:
+It does lot's of things, taking few minutes, and it ends with typing to the screen:
+
 ```
 All services initialised.
 The platform is now running and can be accessed at the following urls:

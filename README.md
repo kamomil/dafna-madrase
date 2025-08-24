@@ -99,4 +99,14 @@ then running again:
 tutor local launch
 ```
 
+it does lot's of think, taking few minutes, and it ends with typing to the screen:
+```
+All services initialised.
+The platform is now running and can be accessed at the following urls:
+
+    http://local.edly.io
+    http://studio.local.edly.io
+    http://apps.local.edly.io
+```
+
 

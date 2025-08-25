@@ -112,4 +112,71 @@ The platform is now running and can be accessed at the following urls:
     http://apps.local.edly.io
 ```
 
+now you should be able to go to those links in your browser.
+The madrase extensions are here https://github.com/madrasafree/
+
+Open edX Developer Onboarding :
+
+https://training.openedx.io/courses/course-v1:OpenedX+OEX-Dev101+2024/about
+
+a good intro to `tutor`:
+https://www.youtube.com/watch?v=BzNcrm$jyFpw4
+
+So now if we run `docker ps` we see lots of running docker images related to the installed openedx
+
+tutor documentation:
+https://docs.tutor.edly.io/
+
+I chose Hebrew when asked for the language of the openedx installed.
+And I can see that when typing:
+
+```
+$ tutor config printvalue LANGUAGE_CODE
+he
+```
+
+to change the language to say english I can do:
+```
+$ tutor config save --set LANGUAGE_CODE=en
+Configuration saved to /home/dafna/.local/share/tutor/config.yml
+Environment generated in /home/dafna/.local/share/tutor/env
+```
+now we run:
+```
+(env) 6.8dafna@guri:~$ tutor config printroot
+/home/dafna/.local/share/tutor
+```
+"Template Rendering" is the process of replacing varaibles with their actual values.
+"The project environment" is the 'env' directory.
+in my case it is '~/.local/share/tutor/env'
+that env directoy can be recreated whenever we run `tutor config save`.
+we should never change the files in the 'env' folder, since the files are generated and
+are not manually written.
+
+### Tutor plugins
+follow this to understand Tutor plugins:
+https://edly.io/academy/tutor-plugins/
+
+
+interestingly, when running `tutor plugins list` , I see a madrse plugin called
+`madrasa_hebrew`. Among many others.
+I have this installed:
+https://github.com/madrasafree/tutor-contrib-madrasa-hebrew
+
+
+I have this installed:
+https://github.com/madrasafree/tutor-contrib-madrasa-hebrew
+
+
+#### Creating a Tutor plugin
+Again, I follow
+https://edly.io/academy/tutor-plugins/
+
+```
+pip install cookiecutter
+```
+and so on...
+
+
+
 

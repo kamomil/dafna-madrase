@@ -263,3 +263,6 @@ git clone git@github.com:madrasafree/madrasa-theme.git \
 tutor images build openedx
 tutor local do settheme madrasa-theme
 ```
+ok, now my link http://local.edly.io/ looks like this:
+![alt text](my-site.png "bla")
+

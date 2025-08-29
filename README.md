@@ -266,3 +266,24 @@ tutor local do settheme madrasa-theme
 ok, now my link http://local.edly.io/ looks like this:
 ![alt text](my-site.png "bla")
 
+What also bother me is that the langauage of edx is set to Hebrew:
+```
+(env) 6.8 (master)dafna@guri:~/git/madrase$ tutor config printvalue LANGUAGE_CODE
+he
+```
+But the link http://local.edly.io/ , everything is in English.
+
+Shai Bergeg shared his own installing instruciotns:
+https://github.com/madrasafree/openedx_devops/wiki/Getting-started
+
+There is apparently a non public plugin repo that can be cloned with:
+```
+git clone https://***@github.com/madrasafree/tutor-contrib-madrasa.git
+```
+It adds what is called `patches`. I still don't understand what are `patches` yet.
+I installed and ebabled that plugin as I did with other plugins.
+
+Last there is the plugin
+git@github.com:madrasafree/tutor-contrib-madrasa-s3.git
+
+I install and enable it as well.

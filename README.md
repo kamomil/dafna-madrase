@@ -251,3 +251,15 @@ yada yada yada. After running `tutor local restart all` and reloading the link
 http://local.edly.io/
 I see the madrasa logo at the upper right corner.
 
+Now , installing the madarsa theme is also easy.
+This is the link:
+https://github.com/madrasafree/madrasa-theme
+
+The instruction on how to install are directly in the readme.
+
+```
+git clone git@github.com:madrasafree/madrasa-theme.git \
+  "$(tutor config printroot)/env/build/openedx/themes/madrasa-theme"
+tutor images build openedx
+tutor local do settheme madrasa-theme
+```

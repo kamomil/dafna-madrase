@@ -286,4 +286,20 @@ I installed and ebabled that plugin as I did with other plugins.
 Last there is the plugin
 git@github.com:madrasafree/tutor-contrib-madrasa-s3.git
 
-I install and enable it as well.
+I installed and enabled it as well.
+
+# Dive into the plugins:
+
+## tutor-contrib-madrasa-hebrew
+https://github.com/madrasafree/tutor-contrib-madrasa-hebrew
+
+This plugin adds templates.
+one of the patches changes:
+```
+-  "profile.datejoined.member.since": "חברות מאז {year}",
++  "profile.datejoined.member.since": "חבר/ה מאז {year}",
+```
+But then when I add  a profile to the site , and enter to the profile link,
+I see does not change,
+![alt text](haverut.png "bla")
+

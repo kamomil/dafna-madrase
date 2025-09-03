@@ -160,9 +160,6 @@ https://edly.io/academy/tutor-plugins/
 
 interestingly, when running `tutor plugins list` , I see a madrse plugin called
 `madrasa_hebrew`. Among many others.
-I have this installed:
-https://github.com/madrasafree/tutor-contrib-madrasa-hebrew
-
 
 I have this installed:
 https://github.com/madrasafree/tutor-contrib-madrasa-hebrew
@@ -244,7 +241,7 @@ index 0000000..687b1e8
 +DEFAULT_EMAIL_LOGO_URL = "https://madrasafree.com/wp-content/uploads/2022/02/logo.png"
 
 ```
-it adds two new files that the `patches` directory.
+it adds two new files in the `patches` directory.
 The files are: `mfe-lms-common-settings`, and `openedx-common-settings`
 
 yada yada yada. After running `tutor local restart all` and reloading the link
@@ -302,4 +299,5 @@ one of the patches changes:
 But then when I add  a profile to the site , and enter to the profile link,
 I see does not change,
 ![alt text](haverut.png "bla")
+
 

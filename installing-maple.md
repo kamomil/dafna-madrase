@@ -78,8 +78,40 @@ Environment generated in /home/dafna/madrasa/maple-env/env
 ```
 Shai wrote a requirements.txt file:
 https://github.com/madrasafree/openedx_devops/wiki/Getting-started#requirementstxt
+As of writing this doc, those are tutor plugins intended for version Redwood+ and do not
+fit to the Maple installation.
+The version of each plugin is in the file `__about__.py`, 
+Let's see the versions:
+```
+maple) 6.8 (master)dafna@guri:~/git/madrase$ find . -name __about__.py | xargs grep __version__
+./tutor-contrib-madrasa-hebrew/madrasa_hebrew/__about__.py:__version__ = "18.0.0"
+./tutor-contrib-myplugin/tutormyplugin/__about__.py:__version__ = "18.0.0"
+./tutor-contrib-madrasa-s3/madrasa_s3/__about__.py:__version__ = "18.2.2"
+./tutor-contrib-madrasa-branding/madrasa_branding/__about__.py:__version__ = "18.0.1"
+./tutor-indigo-madrasa/tutorindigo/__about__.py:__version__ = "18.3.0"
+./tutor-contrib-madrasa/madrasa/__about__.py:__version__ = "18.0.2"
+```
+They are all 18+ which is for Redwood. So let's skip that for now.
+So let's for now skip all plugins related command.
+Next, Shai tell us to run the command:
+```
+$ tutor config save -a OPENEDX_EXTRA_PIP_REQUIREMENTS=git+https://github.com/madrasafree/madrasafree-services@open-release/redwood.master
+```
 
-For Maple it will have to change 
+no idea what that does.
+
+we should look at the inside of https://github.com/madrasafree/madrasafree-services#
+let's skip it as well for now
+now we should just run (NOTE: This should actually NOT work, please read further)
+```
+tutor local launch
+```
+apparently the maple's tutor version (13.3.2.) does not have the `launch` command.
+For this version , we should use the `quickstart` command.
+```
+tutor local quickstart
+```
+ok, now thing start to happen.
 
 
 
